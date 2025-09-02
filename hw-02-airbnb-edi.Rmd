@@ -1,7 +1,9 @@
 ---
 title: "HW 02 - Airbnb listings in Edinburgh"
-author: [enter your name]
+author: Tina Huynh
 output: 
+  pdf_document:
+      latex_engine: xelatex
   tufte::tufte_html:
     css: ../hw.css
     tufte_variant: "envisioned"
