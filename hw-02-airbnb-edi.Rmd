@@ -147,6 +147,23 @@ top5_neighbourhoods <- edibnb %>%
 top5_neighbourhoods
 ```
 
+```{r}
+library(ggridges)
+
+edibnb %>%
+  filter(!is.na(price), price > 0, neighbourhood %in% top5_neighbourhoods$neighbourhood) %>%
+  ggplot(aes(x = price, y = neighbourhood, fill = neighbourhood)) +
+  geom_density_ridges(alpha = 0.6, scale = 1.2, rel_min_height = 0.01) +
+  coord_cartesian(xlim = c(0, quantile(dsbox::edibnb$price, 0.99, na.rm = TRUE))) +
+  labs(
+    title = "Price Distributions of Top 5 Most Expensive neighbourhoods in Edinburgh",
+    x = "Listing Price (GBP)",
+    y = "neighbourhood"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(legend.position = "none")
+```
+
 4.  Create a visualization that will help you compare the distribution of review scores (`review_scores_rating`) across neighbourhoods. You get to decide what type of visualization to create and there is more than one correct answer! In your answer, include a brief interpretation of how Airbnb guests rate properties in general and how the neighbourhoods compare to each other in terms of their ratings.
 
 🧶 ✅ ⬆️ Knit, *commit, and push your changes to GitHub with an appropriate commit message. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards and review the md document on GitHub to make sure you're happy with the final state of your work.*
