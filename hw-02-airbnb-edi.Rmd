@@ -194,7 +194,19 @@ summary_stats <- edibnb %>%
 summary_stats
 ```
 
-4.  Create a visualization that will help you compare the distribution of review scores (`review_scores_rating`) across neighbourhoods. You get to decide what type of visualization to create and there is more than one correct answer! In your answer, include a brief interpretation of how Airbnb guests rate properties in general and how the neighbourhoods compare to each other in terms of their ratings.
+The price distributions in all five neighborhoods demonstrate pronounced positive skewness, characterized by a concentration of listings at moderate price points with an extended tail toward higher values. This asymmetry suggests a market structure where most properties maintain accessible pricing while a select subset commands premium rates.
+
+New Town, with the highest median price (£100), exhibits the most pronounced variance (standard deviation of £108.59), indicating considerable price stratification within this historically significant district. This variability likely reflects the neighborhood's diverse property portfolio, ranging from modest apartments to luxury Georgian residences. The substantial interquartile range (£86.50) further confirms this price diversity, suggesting potential investment opportunities across various market segments.
+
+Stockbridge and West End complete the top five neighborhoods, displaying intermediate pricing patterns. Notably, Stockbridge exhibits the lowest standard deviation (£77.57) among these premium areas, potentially signifying a more uniform housing stock. The median price (£85) and interquartile range (£76) suggest a balanced market, appealing to both mid-range and higher-end renters.
+
+Old Town, despite its status as a primary tourist destination, presents a slightly lower median price (£90) compared to New Town, while maintaining comparable variability (standard deviation of £109.57). This pattern may reflect the neighborhood's mixed accommodation offerings, from heritage buildings to more contemporary developments. The area's tourism appeal evidently supports elevated price points, with maximum values reaching £999.
+
+Bruntsfield demonstrates a more concentrated price distribution (standard deviation of £90.17) relative to its median (£80), suggesting greater homogeneity in property types and quality within this neighborhood. This characteristic could indicate a more stable, predictable market with potentially lower investment risk.
+
+The minimum listing prices remain relatively consistent across all five neighborhoods (ranging from £10-£21), indicating that even in Edinburgh's most exclusive districts, budget accommodation options exist. This accessibility at the lower end contrasts sharply with the maximum values, which reach £999 in multiple neighborhoods, highlighting significant market segmentation.
+
+These pricing patterns reflect Edinburgh's complex residential landscape, where historical significance, architectural heritage, and proximity to cultural attractions interact to create distinctive neighborhood value propositions. The data suggests that New Town and Old Town command premium pricing due to their central location and historical importance, while areas like Bruntsfield may offer more consistent pricing expectations for both investors and visitors seeking accommodation. 
 
 ```{r}
 ggplot(edibnb %>%
