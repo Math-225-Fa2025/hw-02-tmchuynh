@@ -219,7 +219,7 @@ ggplot(edibnb %>%
   labs(
     title = "Distribution of Airbnb Review Scores by neighbourhood in Edinburgh",
     x = "neighbourhood",
-    y = "Review Score (0–100)"
+    y <- "Review Score (0-100)"
   ) +
   theme_minimal(base_size = 12) +
   theme(
